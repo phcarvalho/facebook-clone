@@ -1,25 +1,69 @@
 import React, { Component } from "react";
 import Post from "./Post";
 
-//import "./PostList.css";
-
-import postsDefault from "../assets/posts";
-
 class PostList extends Component {
   state = {
-    posts: []
+    posts: [
+      {
+        id: 1,
+        author: {
+          name: "Paulo Carvalho",
+          avatar: "URL da imagem"
+        },
+        date: "04 Jun 2019",
+        content: "Este é um post de teste",
+        comments: [
+          {
+            id: 1,
+            author: {
+              name: "Paulo Carvalho",
+              avatar: "URL da imagem"
+            },
+            content: "Este é um comentário de teste"
+          },
+          {
+            id: 2,
+            author: {
+              name: "Paulo Carvalho",
+              avatar: "URL da imagem"
+            },
+            content: "Este é um comentário de teste"
+          }
+        ]
+      },
+      {
+        id: 2,
+        author: {
+          name: "Paulo Carvalho",
+          avatar: "URL da imagem"
+        },
+        date: "04 Jun 2019",
+        content: "Este é um post de teste",
+        comments: [
+          {
+            id: 1,
+            author: {
+              name: "Paulo Carvalho",
+              avatar: "URL da imagem"
+            },
+            content: "Este é um comentário de teste"
+          },
+          {
+            id: 2,
+            author: {
+              name: "Paulo Carvalho",
+              avatar: "URL da imagem"
+            },
+            content: "Este é um comentário de teste"
+          }
+        ]
+      }
+    ]
   };
-
-  componentDidMount() {
-    this.setState({
-      posts: postsDefault
-    });
-  }
 
   render() {
     return (
       <ul>
-        <p>Teste</p>
         {this.state.posts.map(post => (
           <Post key={post.id} data={post} />
         ))}

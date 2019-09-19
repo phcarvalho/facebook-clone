@@ -3,14 +3,14 @@ import Comment from "./Comment";
 
 //import "./Post.css";
 
-function Post({ key, data }) {
+function Post({ data }) {
   return (
-    <li key={key}>
-      <p>{data.content}</p>
+    <li>
+      {data.content}
       <ul>
-        {data.comments.map(comment => (
-          <Comment key={comment.id} data={comment} />
-        ))}
+        {data.comments.map(comment => {
+          <Comment key={comment.id} data={comment} />;
+        })}
       </ul>
     </li>
   );
