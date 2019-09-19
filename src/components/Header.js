@@ -1,8 +1,17 @@
 import React from "react";
-import "./Header.css";
 
 function Header() {
-  return <h1>Meu header</h1>;
+  return (
+    <header>
+      <nav>
+        <img src="https://i.imgur.com/KDIDiSE.png" />
+        <div>
+          <span>Meu perfil</span>
+          <i className="material-icons">account_circle</i>
+        </div>
+      </nav>
+    </header>
+  );
 }
 
 export default Header;
