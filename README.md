@@ -1,2 +1,2 @@
-# dynamics-app
- Web app integrated with Dynamics 365
+# Facebook Clone
+ Simple Facebook Clone done with ReactJS
